@@ -1,5 +1,5 @@
 async function getComponent() {
-  const element = document.createElement('div');
+  const element = document.createElement('span');
   const { default: _ } = await import('lodash');
   const { default: Print } = await import('./print');
 
