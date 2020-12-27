@@ -8,7 +8,7 @@ module.exports = (env) => {
   console.log('Production: ', env?.production || process.env.production);
 
   return {
-    mode: 'development',
+    mode: env?.NODE_ENV || 'development',
     entry: {
       index: './src/index.js',
     },
@@ -17,6 +17,7 @@ module.exports = (env) => {
       contentBase: './dist',
       open: true,
       port: 3001,
+      hot: true,
     },
     plugins: [
       new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),

@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "sideEffects": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "webpack --env NODE_ENV=development",
+    "build:prod": "webpack --env NODE_ENV=production",
     "start": "webpack serve",
     "server": "node server.js",
     "watch": "webpack --watch",
